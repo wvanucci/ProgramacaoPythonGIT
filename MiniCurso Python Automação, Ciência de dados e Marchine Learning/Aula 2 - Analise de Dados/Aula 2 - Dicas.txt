@@ -1,0 +1,48 @@
+			SEMPRE: Tem um problema.
+Problema da aula: empresa está com Churn (cancelamento do produto) de mais de 26%
+
+Precisa de uma base de Dados: Vamos usar o do exemplo da aula
+
+Dica1: Para ver os dados use o python (não usar excel) pois é mais rapído
+	Priorizar arquivos csv
+	Dica1.1: Métodos de import e visualizar
+Dica2: Pensar na lógica (Descrição Narrativa; fluxograma)
+Dica3: SEMPRE fazer tratamento de dados;
+Dica4: Usar a biblioteca pandas para análise de dados;
+	Dica4.1: pandas tem varios métodos para visualizar extensão de diferentes arquivos.
+Dica5: Fica mais fácil de a base de dados estiver na mesma pasta do código, se não tem que passar o caminho do arquivo
+Dica6: datafram (ou df) são chamadas de tabelas no python (mas especificamente para o pandas)
+Dica9: Para add coluna na tabela: tabel['nome_da_coluna']= valor_desejado (vai add a coluna com os valores que vc deseja)
+	
+	Tratamento de dados:
+Dica7: Devemos remover colunas inúteis (tabela.drop('nome_da_coluna',axis=1); axis=0 eixo das linhas e axis=1 eixo das colunas)
+Dica8: Como saber se tem dados vazios (devemos deletar ou substituir por algum outro valor)
+	Dica8.1: Sempre que devemos obter informações da base de dados: print(tabela.info())
+		 Podemos visualizar os dados vazios
+	Dica8.1.1: Descobrir tipo de informação (type) e valores vazios
+Dica9: para editar a coluna desejada: tabela['nome_da_coluna'] = pd.to_numeric(tabela_clientes['nome_dacoluna'], errors='coerce')
+	Dica9.1: nesse caso a coluna tinha um tipo diferente (string) transformei em float (to_numeric) e ainda se tiver erro em algum dado ele ignora (errors='coerce')
+Dica10: Excluir qualquer coluna completamente vazia: tabela.dropna(how='all', axis=1). Excluir todas as colunas que tem o valor vazio (how='all')
+	Dica10.1: o mesmo serve para linha (mas usar axis=0)
+Dica11:para remover linha vazia: tabela.dropna(how='any',axis=0) ou tabela.dropna()
+	Dica11.1: note que vamos perder dados em alguma linha, por isso é indicado para big base data;
+
+	Distribuição e analise de dados:
+Dica12: Contar valores de uma coluna: display(tabela['nome_da_coluna'].values.counts())
+	 display(tabela['nome_da_coluna'].values.counts(normalize=True) (exiber em percentual)
+Dica13: Para formatar a tabela usar .map()
+	display(tabela['nome_da_coluna'].values.counts(normalize=True.map('{método_de_formatação}'.format)
+	display(tabela['nome_da_coluna'].values.counts(normalize=True.map('{:.1%}'.format) -> em porcentagem (exemplo 0.25->25.0%)
+Dica14:	Para criar gráficos usar biblioteca plotly. Usar o plotly.express (para gráficos)
+Dica15: para criar gráfico: grafico = plotly.express.histogram(tabela, x='nome_da_coluna', color='nome_da_coluna_para_comparação (ou usa a mesma)')
+	para exibir grafico.show()
+Dica16: Exibir todos os gráfico para todas as colunas da tabela (usar loop for): 
+	
+	for coluna in tabela:
+		grafico=plotly.express.histogram(tabela, x=coluna, color='nome_da_coluna_para_comparação')
+		grafico.show()
+
+	Dica16.1: no python, em uma tabela .csv, automaticamente ele percorre as colunas; para percorrer as linha (os índices) use tabela.index
+Dica17:	Descrever os problemas principais na análise (dos gráficos) e criar hipóteses dos problemas;
+
+

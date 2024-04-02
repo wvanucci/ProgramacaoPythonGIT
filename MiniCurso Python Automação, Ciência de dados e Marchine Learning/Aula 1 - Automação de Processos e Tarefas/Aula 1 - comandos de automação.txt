@@ -1,0 +1,23 @@
+Aula 1- Dicas
+
+Ensinar: Automatizar tarefas. Computador faz a tarefa para você
+Nessa aula vai ser um exemplo automação de mandar email.
+No exemplo, vamos automatizar as ações de usar mouse, teclado e tela. Parece usar um bot.
+
+Dica1: Se tiver uma tarefa, anotar todos os passos (descritiva narrativae fluxograma)
+	Anotar exeplicitamente todos os passos.
+
+Usar pyautogui: Biblioteca de automação (procurar documentação)
+		É uma biblioteca para usar os periféricos
+Usar time: biblioteca para controlaro tempo do programa
+Usar pyperclip: Permite copiar e colar com o python
+
+Dica2: para instalação de bibliotecas pip install nome_da_biblioteca
+Dica3: No jupyter depois do comando pyautogui. se apertar TAB tem todas as opções
+Dica4: pyautogui.PAUSE = 1 (para cada comando ele demora 1 segundo (para evitar o robot))
+Dica5: Melhor usar o método CTRL+C  CTRL+V (utilizando pyperclipp);
+DIca6: pyautogui.position() para descobrir cordenadas da tela. Usar em uma célular nova para testar
+Dica7: para fazer mouse ciclar, usar pyautogui.click(x,y,clicks=nº_de_clicks) (o padrão do python click é 1)
+	Dica7.1: usar time.sleep(tempo_de_espera_desejado) antes do pyautogui.click(x,y) para descobrir a posição de qualquer objeto do computador
+Dica8: Utilizar pyautogui.alert('aviso necessario antes de começar o código') (uma boa é notificar para nao mexer no computador)
+Dica9: Utilizar em partes do código time.sleep(nº_segundo)  para evitar problemas de automação (por exemplo, demora para carregar a execução da função)

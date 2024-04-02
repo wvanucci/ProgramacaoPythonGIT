@@ -1,0 +1,16 @@
+Machine Learning e Ciências de dados
+
+Dica1: Não pode treinar todos os dados disponíveis; Sempre colocar um percentual para teste (em torno de 0.2 - 0.3)
+Dica2: sklearn.model_selection é a biblioteca para machine learning( usamos o train_test_split dessa biblioteca)
+	Dica2.1: devemos selecionar todas as informações que pode correlacionar o valor que quero calcular futuramente (x)
+	Dica2.2: devemos selecionar os valores já determinados em uma váriavel (y)
+Dica3: Usar x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.3, random_state=1) para treinar;
+	Dica3.1: test_size=0.3 estou indicando para separar 30% para teste (se alocam para x_test, y_test);
+Dica4: Devemos definir o tipo de problema (regressão ou categoria)
+Dica5: Existem varios modelos (algoritmo) para IA. Para realizar os treinos devemos escolher pelo menos 2. No sklearn existem 2 uteis para regressão
+	LinearRegression e RadonForest (criamos os para escolher um depois). 
+	Esss modelos são algoritmos complexos (é biblioteca né!) 
+Dica6: Devemos importas as métricas para avaliar os modelos (AQUI VAMOS FAZER O TESTE dos dados selecionados para realizar teste)
+	métricas R² e erro quadratico médio! (o algoritimo aparece no código)
+Dica7: Ao criarmos uma tabela nova dos dados de previsões e teste devemos resetar os índice (podemos dar display(tabela) para ver se os índice estão desordenados
+	Resetar os índices  e ordenar (sempre importante) o drop=True é para colocar os índices antigos foras 

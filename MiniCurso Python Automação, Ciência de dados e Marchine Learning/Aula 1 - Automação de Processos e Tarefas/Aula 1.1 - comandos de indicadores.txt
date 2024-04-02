@@ -1,0 +1,8 @@
+Como ler o arquivo de dados
+
+Dica1: Usar a bibliotecas pandas para análise e ciência de dados;
+Dica2: para ler usar uma variavel: tebela1 = pandas.read_extensãoDoArquivo(r'usar_o_caminho_do_arquivo',sheet_name =nº da posição da aba)
+	Dica2.1: Sempre que passar caminho do arquivo colocar r no inicio para ler exatamente a string do caminho
+	(isso serve para evitar escapes de string (por exempo \n, \"entre, \33[ entre outros)
+Dica3: display(tabela1) (para mostrar o arquivo na tela do jupyter)
+Dica4: para somar valores de uma coluna de tabela: tabela1['legenda_da_coluna'].sum()
